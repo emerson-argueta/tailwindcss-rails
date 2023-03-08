@@ -31,7 +31,7 @@ module Tailwindcss
 
         if exe_path.nil?
           raise ExecutableNotFoundException, <<~MESSAGE
-            Cannot find the tailwindcss executable for #{platform} in #{exe_path}
+            Cannot find the tailwindcss executable for #{platform} in #{File.expand_path(File.join(__dir__, "..", "..", "exe"))}
 
             If you're using bundler, please make sure you're on the latest bundler version:
 
