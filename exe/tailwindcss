@@ -14,7 +14,6 @@ begin
     exec(*command)
   end
 rescue Tailwindcss::Commands::UnsupportedPlatformException, Tailwindcss::Commands::ExecutableNotFoundException => e
-  STDERR.puts("ERROR: " + 'unsupported platform exception, tailwind commands executable not found')
   STDERR.puts("ERROR: " + e.message)
   exit 1
 end
