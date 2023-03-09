@@ -28,9 +28,9 @@ if Rails.root.join(".gitignore").exist?
   append_to_file(".gitignore", %(\n/app/assets/builds/*\n!/app/assets/builds/.keep\n))
 end
 
-unless Rails.root.join("config/tailwind.config.js").exist?
-  say "Add default config/tailwindcss.config.js"
-  copy_file "#{__dir__}/tailwind.config.js", "config/tailwind.config.js"
+unless Rails.root.join("config/tailwind.config.cjs").exist?
+  say "Add default config/tailwindcss.config.cjs"
+  copy_file "#{__dir__}/tailwind.config.cjs", "config/tailwind.config.cjs"
 end
 
 unless Rails.root.join("app/assets/stylesheets/application.tailwind.css").exist?

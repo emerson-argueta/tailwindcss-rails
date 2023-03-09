@@ -1,3 +1,6 @@
+## v3.0.0 / 2023-03-09
+
+* usin commonjs for configuration
 
 ## v2.0.24 / 2023-03-05
 

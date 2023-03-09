@@ -60,7 +60,7 @@ module Tailwindcss
           executable(**kwargs),
           "-i", Rails.root.join("app/assets/stylesheets/application.tailwind.css").to_s,
           "-o", Rails.root.join("app/assets/builds/tailwind.css").to_s,
-          "-c", Rails.root.join("config/tailwind.config.js").to_s,
+          "-c", Rails.root.join("config/tailwind.config.cjs").to_s,
         ].tap do |command|
           command << "--minify" unless (debug || rails_css_compressor?)
         end
