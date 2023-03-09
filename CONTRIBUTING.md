@@ -1,4 +1,4 @@
-# Contributing to tailwindcss-rails
+# Contributing to tailwindcss-rails-cjs
 
 This doc is a brief introduction on modifying and maintaining this gem.
 
@@ -21,4 +21,4 @@ Run `bundle exec rake clobber` then `bundle exec rake download` to ensure the ta
   - [ ] `for g in pkg/*.gem ; do gem push $g ; done`
   - [ ] `git push`
 - announce
-  - [ ] create a release at https://github.com/rails/tailwindcss-rails/releases
+  - [ ] create a release at https://github.com/rails/tailwindcss-rails-cjs/releases

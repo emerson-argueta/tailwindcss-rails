@@ -20,7 +20,7 @@ module Tailwindcss
       )
         if Tailwindcss::Upstream::NATIVE_PLATFORMS.keys.none? { |p| Gem::Platform.match(Gem::Platform.new(p)) }
           raise UnsupportedPlatformException, <<~MESSAGE
-            tailwindcss-rails does not support the #{platform} platform
+            tailwindcss-rails-cjs does not support the #{platform} platform
             Please install tailwindcss following instructions at https://tailwindcss.com/docs/installation
           MESSAGE
         end
@@ -47,7 +47,7 @@ module Tailwindcss
 
             If you're still seeing this message after taking those steps, try running
             `bundle config` and ensure `force_ruby_platform` isn't set to `true`. See
-            https://github.com/rails/tailwindcss-rails#check-bundle_force_ruby_platform
+            https://github.com/rails/tailwindcss-rails-cjs#check-bundle_force_ruby_platform
             for more details.
           MESSAGE
         end

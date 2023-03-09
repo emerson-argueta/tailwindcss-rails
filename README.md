@@ -6,7 +6,7 @@
 
 With Rails 7 you can generate a new application preconfigured with Tailwind by using `--css tailwind`. If you're adding Tailwind later, you need to:
 
-1. Run `./bin/bundle add tailwindcss-rails`
+1. Run `./bin/bundle add tailwindcss-rails-cjs`
 2. Run `./bin/rails tailwindcss:install`
 
 This gem wraps [the standalone executable version](https://tailwindcss.com/blog/standalone-cli) of the Tailwind CSS v3 framework. These executables are platform specific, so there are actually separate underlying gems per platform, but the correct gem will automatically be picked for your platform. Supported platforms are Linux x64, macOS arm64, macOS x64, and Windows x64. (Note that due to this setup, you must install the actual gems – you can't pin your gem to the github repo.)

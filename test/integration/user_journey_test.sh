@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-# reproduce the documented user journey for installing and running tailwindcss-rails
+# reproduce the documented user journey for installing and running tailwindcss-rails-cjs
 # this is run in the CI pipeline, non-zero exit code indicates a failure
 
 set -o pipefail
@@ -17,8 +17,8 @@ gem install rails
 rails new test-app --skip-bundle
 pushd test-app
 
-# install tailwindcss-rails
-bundle add tailwindcss-rails --path="../.."
+# install tailwindcss-rails-cjs
+bundle add tailwindcss-rails-cjs --path="../.."
 bundle install
 
 bin/rails tailwindcss:install

@@ -47,7 +47,7 @@ jobs:
         with:
           name: gem-ruby
           path: pkg
-      - run: "gem install pkg/tailwindcss-rails-*.gem"
+      - run: "gem install pkg/tailwindcss-rails-cjs-*.gem"
       - run: "tailwindcss 2>&1 | fgrep 'ERROR: Cannot find the tailwindcss executable'"
 
   linux-install:
@@ -61,7 +61,7 @@ jobs:
         with:
           name: gem-x86_64-linux
           path: pkg
-      - run: "gem install pkg/tailwindcss-rails-*.gem"
+      - run: "gem install pkg/tailwindcss-rails-cjs-*.gem"
       - run: "tailwindcss --help"
 
   linux-musl-install:
@@ -75,7 +75,7 @@ jobs:
           name: gem-x86_64-linux
           path: pkg
       - run: "gem update --system" # let's make sure the latest is working for us (upstream test, see #200)
-      - run: "gem install pkg/tailwindcss-rails-*.gem"
+      - run: "gem install pkg/tailwindcss-rails-cjs-*.gem"
       - run: "tailwindcss --help"
 
   linux-arm-install:
@@ -91,7 +91,7 @@ jobs:
           docker run --rm -v "$(pwd):/test" -w /test --platform=linux/arm/v7 ruby:3.1 \
             /bin/bash -c "
               set -ex
-              gem install pkg/tailwindcss-rails-*.gem
+              gem install pkg/tailwindcss-rails-cjs-*.gem
               tailwindcss --help
             "
 
@@ -106,7 +106,7 @@ jobs:
         with:
           name: gem-x86_64-darwin
           path: pkg
-      - run: "gem install pkg/tailwindcss-rails-*.gem"
+      - run: "gem install pkg/tailwindcss-rails-cjs-*.gem"
       - run: "tailwindcss --help"
 
   windows-install:
@@ -120,7 +120,7 @@ jobs:
         with:
           name: gem-x64-mingw32
           path: pkg
-      - run: "gem install pkg/tailwindcss-rails-*.gem"
+      - run: "gem install pkg/tailwindcss-rails-cjs-*.gem"
       - run: "tailwindcss --help"
 
   windows-ucrt-install:
@@ -134,5 +134,5 @@ jobs:
         with:
           name: gem-x64-mingw-ucrt
           path: pkg
-      - run: "gem install pkg/tailwindcss-rails-*.gem"
+      - run: "gem install pkg/tailwindcss-rails-cjs-*.gem"
       - run: "tailwindcss --help"

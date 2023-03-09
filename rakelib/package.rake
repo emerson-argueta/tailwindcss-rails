@@ -23,7 +23,7 @@
 #     https://rubyinstaller.org/2021/12/31/rubyinstaller-3.1.0-1-released.html
 #
 #  As a concrete example, an x86_64-linux system will see these files on disk after installing
-#  tailwindcss-rails-1.x.x-x86_64-linux.gem:
+#  tailwindcss-rails-cjs-1.x.x-x86_64-linux.gem:
 #
 #     exe/
 #     ├── tailwindcss
@@ -32,13 +32,13 @@
 #
 #  So the full set of gem files created will be:
 #
-#  - pkg/tailwindcss-rails-1.0.0.gem
-#  - pkg/tailwindcss-rails-1.0.0-aarch64-linux.gem
-#  - pkg/tailwindcss-rails-1.0.0-arm64-darwin.gem
-#  - pkg/tailwindcss-rails-1.0.0-x64-mingw32.gem
-#  - pkg/tailwindcss-rails-1.0.0-x64-mingw-ucrt.gem
-#  - pkg/tailwindcss-rails-1.0.0-x86_64-darwin.gem
-#  - pkg/tailwindcss-rails-1.0.0-x86_64-linux.gem
+#  - pkg/tailwindcss-rails-cjs-1.0.0.gem
+#  - pkg/tailwindcss-rails-cjs-1.0.0-aarch64-linux.gem
+#  - pkg/tailwindcss-rails-cjs-1.0.0-arm64-darwin.gem
+#  - pkg/tailwindcss-rails-cjs-1.0.0-x64-mingw32.gem
+#  - pkg/tailwindcss-rails-cjs-1.0.0-x64-mingw-ucrt.gem
+#  - pkg/tailwindcss-rails-cjs-1.0.0-x86_64-darwin.gem
+#  - pkg/tailwindcss-rails-cjs-1.0.0-x86_64-linux.gem
 # 
 #  Note that in addition to the native gems, a vanilla "ruby" gem will also be created without
 #  either the `exe/tailwindcss` script or a binary executable present.
@@ -72,7 +72,7 @@ def tailwindcss_download_url(filename)
   "https://github.com/tailwindlabs/tailwindcss/releases/download/#{Tailwindcss::Upstream::VERSION}/#{filename}"
 end
 
-TAILWINDCSS_RAILS_GEMSPEC = Bundler.load_gemspec("tailwindcss-rails.gemspec")
+TAILWINDCSS_RAILS_GEMSPEC = Bundler.load_gemspec("tailwindcss-rails-cjs.gemspec")
 
 gem_path = Gem::PackageTask.new(TAILWINDCSS_RAILS_GEMSPEC).define
 desc "Build the ruby gem"
