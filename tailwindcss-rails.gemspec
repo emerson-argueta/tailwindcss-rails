@@ -1,11 +1,11 @@
 require_relative "lib/tailwindcss/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "tailwindcss-rails"
+  spec.name        = "tailwindcss-rails-commonjs"
   spec.version     = Tailwindcss::VERSION
   spec.authors     = [ "David Heinemeier Hansson" ]
   spec.email       = "david@loudthinking.com"
-  spec.homepage    = "https://github.com/rails/tailwindcss-rails"
+  spec.homepage    = "https://github.com/emerson-argueta/tailwindcss-rails"
   spec.summary     = "Integrate Tailwind CSS with the asset pipeline in Rails."
   spec.license     = "MIT"
 
