@@ -1,7 +1,7 @@
 require_relative "lib/tailwindcss/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "tailwindcss-rails-commonjs"
+  spec.name        = "tailwindcss-rails-cjs"
   spec.version     = Tailwindcss::VERSION
   spec.authors     = [ "David Heinemeier Hansson" ]
   spec.email       = "david@loudthinking.com"
